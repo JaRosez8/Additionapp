@@ -1,0 +1,67 @@
+body { /* body is the root element of the document. This pertains to the wholepage */
+  background-color: rgb(118,134,146);
+  font-family:  'Old English Text MT', serif;
+  font-size: xx-large; 
+} 
+
+.MiddleText span { /* pertains to text that is attech to span */
+  color: orangered;
+}
+
+.MiddleText { /* pertains to text that is attech to div. */
+  color: white;
+ 
+}
+
+#root{ /* pertains to the root element of the document. */
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+ 
+}
+
+.rotating-input { /* pertains to the input element that is rotating. className in jsx. */
+  transition: transform 300ms; /* transition is a css property that allows you to change property values smoothly (over a given duration). */
+  width: 80px;
+  height: 20px;
+  font-size: 14px;
+  background-image: url('./narutoInputBar1.jpg');
+  background-size: cover; /* background-size is a css property that allows you to set the size of the background image. */
+  background-repeat: no-repeat; /* background-repeat is a css property that allows you to set how the background image is repeated. */
+  color: orangered;
+  padding: 12px;
+  font-size: larger;
+}
+ 
+.rotating-input:hover { /* pertains to the input element that is rotating when hovered. */
+  transform: rotate(360deg); /* rotate is a css property that allows you to rotate an element from 0 to 360 degrees. */
+}
+
+button { /* pertains to the button element. add and rest button*/
+  margin-top: 50px; /* margin-top is a css property that allows you to set the top margin of an element. */
+  margin-bottom: 40px;
+  padding: 5px 15px;
+  font-size: 14px;
+
+}
+
+
+ 
+@keyframes rotating-input-spin { /* keyframes is a css property that allows you to create animations. allows it to spin */
+  from { /* from is a css property that allows you to set the starting point of an animation. */
+    transform: rotate(0deg); /* rotate is a css property that allows you to rotate an element from 0 to 360 degrees. */
+  }
+  to { /* to is a css property that allows you to set the ending point of an animation. */
+    transform: rotate(360deg); 
+  }
+}
+ 
+@media (prefers-reduced-motion: no-preference) { /* media is a css property that allows you to apply styles based on the device's characteristics. */
+  .rotating-input {
+    animation: rotating-input-spin infinite 20s linear; /* animation is a css property that allows you to create animations. */
+  }
+}
+ 
+ 
+
